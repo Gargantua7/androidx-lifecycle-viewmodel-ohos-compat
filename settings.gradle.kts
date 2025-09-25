@@ -20,3 +20,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "androidx-lifecycle"
 include(":lifecycle:lifecycle-viewmodel")
+include(":lifecycle:lifecycle-viewmodel-compose")
