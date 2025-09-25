@@ -33,7 +33,6 @@ import kotlin.reflect.KClass
  * [HasDefaultViewModelProviderFactory] will get [CreationExtras] used for creation of [VM]
  */
 public class ViewModelLazy<VM : ViewModel>
-@JvmOverloads
 constructor(
     private val viewModelClass: KClass<VM>,
     private val storeProducer: () -> ViewModelStore,

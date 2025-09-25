@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 The Android Open Source Project
+ * Copyright 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,6 @@
  * limitations under the License.
  */
 
-package androidx.lifecycle
+package androidx.lifecycle.viewmodel.internal
 
-import androidx.annotation.MainThread
-import kotlin.jvm.JvmName
-
-/**
- * Returns an existing ViewModel or creates a new one in the scope (usually, a fragment or an
- * activity), associated with this `ViewModelProvider`.
- *
- * @see ViewModelProvider.get(Class)
- */
-@MainThread public inline fun <reified VM : ViewModel> ViewModelProvider.get(): VM = get(VM::class)
+internal actual val PTHREAD_MUTEX_RECURSIVE: Int = platform.posix.PTHREAD_MUTEX_RECURSIVE

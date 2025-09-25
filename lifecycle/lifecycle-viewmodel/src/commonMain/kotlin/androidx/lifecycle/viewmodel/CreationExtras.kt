@@ -65,7 +65,7 @@ public abstract class CreationExtras internal constructor() {
 
     public companion object {
         /** Returns an unique [Key] to be associated with an extra. */
-        @JvmStatic public inline fun <reified T> Key(): Key<T> = object : Key<T> {}
+        public inline fun <reified T> Key(): Key<T> = object : Key<T> {}
     }
 }
 
@@ -88,7 +88,6 @@ internal constructor(initialExtras: Map<Key<*>, Any?>) : CreationExtras() {
      * Constructs a [MutableCreationExtras] containing the elements of the specified
      * [initialExtras], in the order they are returned by the [CreationExtras]'s iterator.
      */
-    @JvmOverloads
     public constructor(initialExtras: CreationExtras = Empty) : this(initialExtras.extras)
 
     init {
